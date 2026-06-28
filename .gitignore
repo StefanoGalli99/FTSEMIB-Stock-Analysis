@@ -1,0 +1,9 @@
+# ambiente virtuale
+.venv/
+
+# cache Python
+__pycache__/
+*.pyc
+
+# dati scaricati (rigenerabili da yfinance)
+data/
