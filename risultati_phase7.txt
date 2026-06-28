@@ -1,0 +1,58 @@
+====================================================================================================
+HAR-RV sulla VOLATILITA' GIORNALIERA (proxy |r|) — componenti 1/5/22 gg, split 70/30 cronologico
+R^2 OOS = 1 - SSE_modello/SSE_(media storica).  >0 -> batte il benchmark 'volatilita' costante'.
+====================================================================================================
+
+ticker      n_tr  n_te  RMSE mod  RMSE med  RMSE oggi   R2 OOS  batte med   b_d   b_w   b_m  sum_b  staz.(ADFp/KPSSp)
+----------------------------------------------------------------------------------------------------
+IVG.MI       773   342   0.01477   0.01883    0.01652   0.3842        SI   0.11  0.01  0.36   0.48  ambigua    (0.000/0.010)
+BAMI.MI     2019   876   0.01247   0.01460    0.01629   0.2700        SI   0.06  0.32  0.38   0.75  ambigua    (0.000/0.010)
+PST.MI      1873   813   0.00738   0.00838    0.00978   0.2255        SI   0.04  0.38  0.29   0.71  STAZIONARIA(0.000/0.091)
+PIRC.MI     1527   664   0.00959   0.01088    0.01282   0.2223        SI   0.04  0.21  0.43   0.68  STAZIONARIA(0.000/0.071)
+BMED.MI     2019   876   0.00968   0.01085    0.01241   0.2047        SI   0.11  0.30  0.30   0.71  STAZIONARIA(0.000/0.100)
+AZM.MI      2019   876   0.01099   0.01218    0.01379   0.1866        SI   0.14  0.14  0.46   0.75  ambigua    (0.000/0.042)
+G.MI        2019   876   0.00740   0.00806    0.00937   0.1588        SI   0.05  0.29  0.37   0.71  ambigua    (0.000/0.010)
+ENEL.MI     2019   876   0.00761   0.00824    0.00992   0.1476        SI   0.02  0.34  0.23   0.60  STAZIONARIA(0.000/0.066)
+UCG.MI      2019   876   0.01389   0.01488    0.01849   0.1283        SI   0.07  0.33  0.27   0.67  STAZIONARIA(0.000/0.100)
+ENI.MI      2019   876   0.00913   0.00976    0.01241   0.1232        SI   0.03  0.31  0.40   0.74  STAZIONARIA(0.000/0.062)
+UNI.MI      2019   876   0.01255   0.01339    0.01683   0.1218        SI   0.06  0.35  0.29   0.70  ambigua    (0.000/0.038)
+MB.MI       2019   876   0.01222   0.01300    0.01628   0.1162        SI   0.07  0.34  0.34   0.74  ambigua    (0.000/0.047)
+INW.MI      1937   840   0.01082   0.01150    0.01383   0.1141        SI   0.10  0.18  0.30   0.59  STAZIONARIA(0.000/0.100)
+ISP.MI      2019   876   0.01017   0.01081    0.01334   0.1140        SI   0.11  0.32  0.30   0.73  STAZIONARIA(0.000/0.093)
+TEN.MI      2019   876   0.01294   0.01368    0.01730   0.1046        SI   0.01  0.22  0.34   0.57  ambigua    (0.000/0.010)
+TRN.MI      2019   876   0.00693   0.00730    0.00882   0.0992        SI   0.02  0.39  0.24   0.66  STAZIONARIA(0.000/0.073)
+SRG.MI      2019   876   0.00682   0.00716    0.00900   0.0937        SI   0.02  0.38  0.28   0.68  STAZIONARIA(0.000/0.100)
+FBK.MI      2019   876   0.01196   0.01255    0.01538   0.0910        SI   0.07  0.19  0.37   0.63  STAZIONARIA(0.000/0.100)
+BPE.MI      2019   876   0.01415   0.01474    0.01903   0.0782        SI   0.07  0.25  0.39   0.71  ambigua    (0.000/0.043)
+REC.MI      2019   876   0.00936   0.00967    0.01229   0.0632        SI   0.10  0.20  0.24   0.54  STAZIONARIA(0.000/0.100)
+SPM.MI      2019   876   0.01654   0.01706    0.02202   0.0604        SI   0.21  0.23  0.29   0.73  ambigua    (0.000/0.049)
+HER.MI      2019   876   0.00870   0.00894    0.01149   0.0540        SI   0.13  0.22  0.27   0.63  ambigua    (0.000/0.010)
+IG.MI       1689   734   0.00765   0.00782    0.01034   0.0437        SI   0.08  0.19  0.39   0.65  STAZIONARIA(0.000/0.100)
+PRY.MI      2019   876   0.01434   0.01466    0.01986   0.0431        SI   0.03  0.31  0.32   0.65  STAZIONARIA(0.000/0.100)
+A2A.MI      2019   876   0.00969   0.00988    0.01312   0.0388        SI   0.02  0.33  0.24   0.59  STAZIONARIA(0.000/0.085)
+STLAM.MI    2019   876   0.01766   0.01798    0.02376   0.0353        SI   0.01  0.29  0.31   0.61  STAZIONARIA(0.000/0.100)
+BMPS.MI     2019   876   0.01822   0.01847    0.02437   0.0261        SI   0.25  0.08  0.38   0.71  STAZIONARIA(0.000/0.073)
+LDO.MI      2019   876   0.01572   0.01592    0.02161   0.0240        SI   0.06  0.23  0.33   0.61  STAZIONARIA(0.000/0.100)
+CPR.MI      2019   876   0.01469   0.01485    0.02005   0.0213        SI   0.04  0.28  0.33   0.65  STAZIONARIA(0.000/0.100)
+NEXI.MI     1254   548   0.01562   0.01577    0.02104   0.0193        SI   0.02  0.31  0.39   0.72  STAZIONARIA(0.000/0.100)
+RACE.MI     1841   799   0.01325   0.01336    0.01831   0.0150        SI   0.06  0.14  0.40   0.60  STAZIONARIA(0.000/0.100)
+STMMI.MI    2019   876   0.01888   0.01901    0.02580   0.0139        SI  -0.02  0.27  0.30   0.55  STAZIONARIA(0.000/0.100)
+DIA.MI      2019   876   0.01361   0.01369    0.01805   0.0116        SI   0.05  0.08  0.52   0.65  ambigua    (0.000/0.010)
+MONC.MI     2019   876   0.01349   0.01356    0.01823   0.0104        SI   0.08  0.16  0.37   0.61  ambigua    (0.000/0.021)
+IP.MI       2019   876   0.01501   0.01505    0.01980   0.0063        SI   0.08  0.07  0.47   0.62  ambigua    (0.000/0.010)
+BC.MI       2019   876   0.01416   0.01419    0.01912   0.0044        SI   0.03  0.17  0.42   0.62  ambigua    (0.000/0.010)
+AMP.MI      2019   876   0.01719   0.01711    0.02289  -0.0092        no   0.09  0.23  0.31   0.63  ambigua    (0.000/0.010)
+ERG.MI      2019   876   0.01090   0.01084    0.01453  -0.0114        no   0.14  0.26  0.21   0.62  ambigua    (0.000/0.010)
+TIT.MI      2019   876   0.01631   0.01620    0.02245  -0.0143        no   0.10  0.31  0.23   0.65  STAZIONARIA(0.000/0.070)
+----------------------------------------------------------------------------------------------------
+Titoli analizzati: 39
+Titoli che battono il benchmark 'media storica' (R^2 OOS > 0): 36 (92%)
+Mediana R^2 OOS su tutti i titoli: 0.0632
+Mediana somma beta (persistenza HAR): 0.651  (vicino a 1 -> volatilita' molto persistente)
+Test binomiale (H0: meta' batte per caso, p=0.5), one-sided: p = 1.804e-08
+
+LETTURA: la mediana R^2 OOS e' > 0 (e attesa nettamente positiva). A differenza
+delle fasi su rendimenti/lead-lag, qui c'e' segnale GENUINO e fuori campione: la
+volatilita' di domani e' prevedibile dalla sua media recente a 1/5/22 giorni. Il
+segnale che mancava nel SEGNO del rendimento vive nella sua AMPIEZZA. La somma dei
+beta vicina a 1 conferma la memoria lunga (volatility clustering) gia' vista nell'ACF.
