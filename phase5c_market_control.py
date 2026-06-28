@@ -14,7 +14,6 @@ Combinato col controllo staleness di 5b (sottogruppo FRESCHI), questo e' il test
 se dopo aver tolto SIA i prezzi stantii SIA il mercato non resta direzionalita',
 la conclusione "nessun lead-lag informativo" e' blindata.
 """
-
 from __future__ import annotations
 import os
 import numpy as np
@@ -35,9 +34,13 @@ ALPHA = 0.05
 
 def market_weekly() -> pd.Series:
     """Rendimento settimanale dell'indice FTSE MIB (con cache)."""
+    idx = None
     if os.path.exists(MKT_CACHE):
-        idx = pd.read_pickle(MKT_CACHE)
-    else:
+        try:
+            idx = pd.read_pickle(MKT_CACHE)
+        except Exception as e:
+            print(f"[!] Errore nel caricamento della cache dell'indice ({e}). Scarico nuovamente...")
+    if idx is None:
         idx = yf.download("FTSEMIB.MI", start=START_DATE, end=END_DATE,
                           interval="1d", auto_adjust=False, progress=False)
         idx.to_pickle(MKT_CACHE)

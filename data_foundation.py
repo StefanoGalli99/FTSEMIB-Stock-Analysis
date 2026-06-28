@@ -36,8 +36,7 @@ END_DATE = datetime.today().strftime("%Y-%m-%d")
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 DAILY_CACHE = os.path.join(DATA_DIR, "daily_raw.pkl")
 
-# Universo FTSE MIB (ripreso dal vecchio script, con 'STM' corretto in 'STM.MI').
-# I ticker che non restituiscono dati verranno segnalati e scartati, non indovinati.
+
 TICKERS = [
     "BMPS.MI", "TEN.MI", "LDO.MI", "SPM.MI", "BAMI.MI", "FBK.MI", "G.MI", "IP.MI",
     "BC.MI", "AZM.MI", "A2A.MI", "IVG.MI", "RACE.MI", "PST.MI", "PIRC.MI", "DIA.MI", "PRY.MI",
@@ -50,6 +49,7 @@ TICKERS = [
 # ---------------------------------------------------------------------------
 # 1. DOWNLOAD DATI GIORNALIERI (con cache)
 # ---------------------------------------------------------------------------
+
 def download_daily(tickers=TICKERS, start=START_DATE, end=END_DATE,
                    use_cache=True, cache_path=DAILY_CACHE) -> pd.DataFrame:
     """Scarica i daily per tutti i ticker. Ritorna un DataFrame con colonne MultiIndex
@@ -58,7 +58,10 @@ def download_daily(tickers=TICKERS, start=START_DATE, end=END_DATE,
     os.makedirs(DATA_DIR, exist_ok=True)
     if use_cache and os.path.exists(cache_path):
         print(f"[cache] leggo i daily da {cache_path}")
-        return pd.read_pickle(cache_path)
+        try:
+            return pd.read_pickle(cache_path)
+        except Exception as e:
+            print(f"[!] Errore nel caricamento della cache ({e}). Scarico nuovamente...")
 
     print(f"[download] {len(tickers)} ticker, {start} -> {end} ...")
     df = yf.download(
